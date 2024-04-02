@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mochiy Pop One", sans-serif; 
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ESTILO DO CABEÇALHO    */
+header {
+    padding: 50px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a:hover {
+    transform: scale(1.2);
+}
+
+header a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button {
+    padding: 3px 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+header .btn-contato button:hover {
+    box-shadow: 0px 0px 8px;
+}
+
+.bg {
+    background-image: url(gg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* TOPO DO SITE    */
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+/* ESTILOS PARA O FORMULÁRIO DE CONTATO */
+.contato {
+    background-color: #ffffff;
+    padding: 40px 4%;
+}
+
+.contato h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.contato input[type="text"],
+.contato input[type="email"],
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.contato textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contato input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contato input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para os links de contato */
+.contato p {
+    margin-top: 20px;
+}
+
+.contato a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
