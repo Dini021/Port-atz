@@ -6,7 +6,7 @@
     <title>Seu Site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <style>
@@ -23,6 +23,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             overflow-y: auto;
             max-height: 80%;
+            width: 90%; /* Ajuste para largura máxima */
+            max-width: 400px; /* Largura máxima */
         }
 
         #formulario-contato label {
@@ -67,20 +69,185 @@
             color: green;
             margin-top: 10px;
         }
+
+        /* Estilos adicionais para o submenu de especialidades com imagens */
+        .menu-desktop ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8); /* Background menos transparente */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 0; /* Removido o padding para evitar espaçamento extra */
+            list-style-type: none; /* Removido marcadores de lista */
+        }
+
+        .menu-desktop ul li:hover > ul {
+            display: block;
+        }
+
+        .menu-desktop ul ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-desktop ul ul li img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .menu-desktop ul ul li a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            white-space: nowrap;
+            text-decoration: none; /* Removido sublinhado dos links */
+            color: #fff; /* Cor dos textos definida como branca */
+        }
+
+        /* Estilo para o submenu de Projetos */
+        .menu-desktop ul ul {
+            background-color: rgba(0, 0, 0, 0.8); /* Background menos transparente */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+
+        .menu-desktop ul ul li {
+            padding: 10px 20px;
+        }
+
+        /* Estilo para o cabeçalho e menu */
+        header {
+            background-color: #333; /* Cor de fundo do cabeçalho */
+            color: #fff; /* Cor do texto no cabeçalho */
+            padding: 10px 0;
+        }
+
+        .interface {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 100px; /* Largura da logo */
+            height: auto; /* Altura automática */
+            background-color: #fff; /* Cor de fundo da logo */
+        }
+
+        .menu-desktop ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-desktop ul li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .menu-desktop ul li a {
+            color: #fff; /* Cor do texto no menu */
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .menu-desktop ul ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #555; /* Cor de fundo do submenu */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 1000; /* Z-index para garantir que fique sobre o conteúdo */
+            display: none;
+        }
+
+        .menu-desktop ul ul li {
+            padding: 10px;
+        }
+
+        .menu-desktop ul li:hover > ul {
+            display: block;
+        }
+
+        .btn-contato button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-contato button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para tornar o header responsivo */
+        @media screen and (max-width: 768px) {
+            .interface {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .menu-desktop {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .menu-desktop ul {
+                flex-direction: column;
+            }
+
+            .menu-desktop ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .menu-desktop ul ul {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .btn-contato {
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 <body class="bg">
     <header>
         <div class="interface">
             <div class="logo"></div>
-            <a href="a"></a>
-            <img src="" alt="">
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="*">Inicio</a></li>
-                    <li><a href="*">Especialidades</a></li>
-                    <li><a href="*">Sobre</a></li>
-                    <li><a href="*">Projetos</a></li>
+                    <li><a href="#">Início</a></li>
+                    <li>
+                        <a href="#">Especialidades</a>
+                        <ul>
+                            <li><a href="#"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> Python</a></li>
+                            <li><a href="#"><img src="img/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
+                            <li><a href="#"><img src="img/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sobre</a></li>
+                    <li>
+                        <a href="#">Projetos</a>
+                        <ul>
+                            <li><a href="#">Sistema Solar</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <div class="btn-contato">
