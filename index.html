@@ -121,6 +121,7 @@
             background-color: #333; /* Cor de fundo do cabeçalho */
             color: #fff; /* Cor do texto no cabeçalho */
             padding: 10px 0;
+            position: relative;
         }
 
         .interface {
@@ -233,7 +234,9 @@
             }
 
             .btn-contato {
-                margin-top: 20px;
+                position: absolute;
+                top: 10px;
+                right: 20px;
             }
 
             /* Exibir o botão do menu hambúrguer em dispositivos móveis */
@@ -368,6 +371,10 @@
             } else {
                 menu.style.display = 'block';
             }
+
+            // Ocultar o formulário de contato ao abrir o menu hambúrguer em dispositivos móveis
+            var formulario = document.getElementById('formulario-contato');
+            formulario.style.display = 'none';
         });
 
         // Script para fechar submenus ao clicar duas vezes na aba principal
