@@ -201,17 +201,29 @@
             }
 
             .menu-desktop {
-                margin-top: 20px;
+                display: none; /* Ocultar o menu por padrão em dispositivos móveis */
                 width: 100%;
             }
 
             .menu-desktop ul {
                 flex-direction: column;
+                background-color: #333; /* Cor de fundo do menu mobile */
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                padding: 0;
+                z-index: 1000;
             }
 
             .menu-desktop ul li {
                 margin-right: 0;
                 margin-bottom: 10px;
+            }
+
+            .menu-desktop ul li a {
+                padding: 10px 20px;
+                display: block;
             }
 
             .menu-desktop ul ul {
@@ -223,27 +235,53 @@
             .btn-contato {
                 margin-top: 20px;
             }
+
+            /* Exibir o botão do menu hambúrguer em dispositivos móveis */
+            .menu-hamburguer {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+
+            /* Estilizar o ícone do menu hambúrguer */
+            .menu-hamburguer i {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+
+        /* Ocultar o botão do menu hambúrguer em telas maiores */
+        @media screen and (min-width: 769px) {
+            .menu-hamburguer {
+                display: none;
+            }
         }
     </style>
 </head>
 <body class="bg">
     <header>
         <div class="interface">
+            <!-- Botão do menu hambúrguer (três barras) -->
+            <div class="menu-hamburguer" id="btnHamburguer">
+                <i class="fas fa-bars"></i>
+            </div>
             <div class="logo"></div>
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
+                    <li><a href="#" class="menu-item" data-toggle="sub-menu">Início</a></li>
                     <li>
-                        <a href="#">Especialidades</a>
+                        <a href="#" class="menu-item" data-toggle="sub-menu">Especialidades</a>
                         <ul>
-                            <li><a href="#"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> Python</a></li>
-                            <li><a href="#"><img src="img/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
-                            <li><a href="#"><img src="img/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/Python"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> Python</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)"><img src="img/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/C++"><img src="img/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#" class="menu-item" data-toggle="sub-menu">Sobre</a></li>
                     <li>
-                        <a href="#">Projetos</a>
+                        <a href="#" class="menu-item" data-toggle="sub-menu">Projetos</a>
                         <ul>
                             <li><a href="#">Sistema Solar</a></li>
                         </ul>
@@ -320,6 +358,26 @@
         // Mostrar mensagem de sucesso após o envio do formulário
         document.querySelector('form').addEventListener('submit', function() {
             document.getElementById('sucesso').style.display = 'block';
+        });
+
+        // Script para mostrar/ocultar o menu em dispositivos móveis
+        document.getElementById('btnHamburguer').addEventListener('click', function() {
+            var menu = document.querySelector('.menu-desktop');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+
+        // Script para fechar submenus ao clicar duas vezes na aba principal
+        document.querySelectorAll('.menu-item').forEach(function(item) {
+            item.addEventListener('dblclick', function() {
+                var submenu = this.nextElementSibling;
+                if (submenu && submenu.tagName === 'UL') {
+                    submenu.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
