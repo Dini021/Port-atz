@@ -131,6 +131,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            position: relative; /* Garante que a posição relativa englobe todos os filhos */
         }
 
         .logo {
@@ -214,7 +215,7 @@
                 left: 0;
                 width: 100%;
                 padding: 0;
-                z-index: 1000;
+                z-index: 999; /* Z-index menor para ficar abaixo do menu hambúrguer */
             }
 
             .menu-desktop ul li {
@@ -246,6 +247,7 @@
                 position: absolute;
                 top: 10px;
                 left: 20px;
+                z-index: 10000; /* Z-index muito alto para garantir que fique acima de tudo */
             }
 
             /* Estilizar o ícone do menu hambúrguer */
@@ -379,10 +381,25 @@
 
         // Script para fechar submenus ao clicar duas vezes na aba principal
         document.querySelectorAll('.menu-item').forEach(function(item) {
-            item.addEventListener('dblclick', function() {
+            item.addEventListener('click', function(event) {
                 var submenu = this.nextElementSibling;
                 if (submenu && submenu.tagName === 'UL') {
-                    submenu.style.display = 'none';
+                    // Fechar todos os submenus
+                    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+                        var subMenu = menuItem.nextElementSibling;
+                        if (subMenu && subMenu !== submenu) {
+                            subMenu.style.display = 'none';
+                        }
+                    });
+
+                    // Abrir ou fechar o submenu clicado
+                    if (submenu.style.display === 'block') {
+                        submenu.style.display = 'none';
+                    } else {
+                        submenu.style.display = 'block';
+                    }
+
+                    event.preventDefault(); // Evita o comportamento padrão do link
                 }
             });
         });
