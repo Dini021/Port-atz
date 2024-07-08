@@ -17,19 +17,19 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #f8f8f8;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.938);
             overflow-y: auto;
-            max-height: 80%;
-            width: 90%; /* Ajuste para largura máxima */
+            max-height: 77%;
+            width: 85%; /* Ajuste para largura máxima */
             max-width: 400px; /* Largura máxima */
         }
 
         #formulario-contato label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         #formulario-contato input[type="text"],
@@ -37,15 +37,15 @@
         #formulario-contato textarea,
         #formulario-contato select {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
         }
 
         #formulario-contato input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #3ceb25;
+            color: #000000;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
@@ -101,77 +101,62 @@
             padding: 10px;
             white-space: nowrap;
             text-decoration: none; /* Removido sublinhado dos links */
-            color: #fff; /* Cor dos textos definida como branca */
-        }
-
-        /* Estilo para o submenu de Projetos */
-        .menu-desktop ul ul {
-            background-color: rgba(0, 0, 0, 0.8); /* Background menos transparente */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            min-width: 200px;
-        }
-
-        .menu-desktop ul ul li {
-            padding: 10px 20px;
+            color: #fcfbfb; /* Cor dos textos definida como branca */
         }
 
         /* Estilo para o cabeçalho e menu */
         header {
-            background-color: #333; /* Cor de fundo do cabeçalho */
+            background-color: #36323200; /* Cor de fundo do cabeçalho */
             color: #fff; /* Cor do texto no cabeçalho */
-            padding: 10px 0;
-            position: relative;
+            padding: 1px 0;
+            position: static;
         }
 
         .interface {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            position: relative; /* Garante que a posição relativa englobe todos os filhos */
+            position: static; /* Garante que a posição relativa englobe todos os filhos */
         }
 
         .logo {
             width: 100px; /* Largura da logo */
             height: auto; /* Altura automática */
-            background-color: #fff; /* Cor de fundo da logo */
         }
 
         .menu-desktop ul {
             display: flex;
-            list-style: none;
-            padding: 0;
         }
 
         .menu-desktop ul li {
-            position: relative;
-            margin-right: 20px;
+            position: sticky;
+            margin-right: 30px;
         }
 
         .menu-desktop ul li a {
-            color: #fff; /* Cor do texto no menu */
-            text-decoration: none;
-            padding: 10px;
-            display: block;
+            color: #f7f2f2; /* Cor do texto no menu */
+            text-decoration:none;
+            padding: 12px;
+            display:inline-block;
         }
 
         .menu-desktop ul ul {
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #555; /* Cor de fundo do submenu */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #29272700; /* Cor de fundo do submenu */
+            border-radius: 0px;
+            box-shadow: 0 0 1000px rgba(7, 7, 7, 0);
             min-width: 200px;
             z-index: 1000; /* Z-index para garantir que fique sobre o conteúdo */
             display: none;
         }
 
         .menu-desktop ul ul li {
-            padding: 10px;
+            padding: 1px;
         }
 
         .menu-desktop ul li:hover > ul {
@@ -179,8 +164,8 @@
         }
 
         .btn-contato button {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #25232300;
+            color: #fcf7f7;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -188,7 +173,7 @@
         }
 
         .btn-contato button:hover {
-            background-color: #0056b3;
+            background-color: #1d171700;
         }
 
         /* Estilo para tornar o header responsivo */
@@ -209,35 +194,35 @@
 
             .menu-desktop ul {
                 flex-direction: column;
-                background-color: #333; /* Cor de fundo do menu mobile */
+                background-color: #0a0a0ac5; /* Cor de fundo do menu mobile */
                 position: absolute;
-                top: 50px;
+                top: 0px;
                 left: 0;
                 width: 100%;
-                padding: 0;
+                padding: 100;
                 z-index: 999; /* Z-index menor para ficar abaixo do menu hambúrguer */
             }
 
             .menu-desktop ul li {
                 margin-right: 0;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
             .menu-desktop ul li a {
-                padding: 10px 20px;
+                padding: 30px 30px;
                 display: block;
             }
 
             .menu-desktop ul ul {
                 position: static;
                 width: 100%;
-                margin-top: 10px;
+                margin-top:2px;
             }
 
             .btn-contato {
                 position: absolute;
                 top: 10px;
-                right: 20px;
+                right: 0px;
             }
 
             /* Exibir o botão do menu hambúrguer em dispositivos móveis */
@@ -246,13 +231,13 @@
                 cursor: pointer;
                 position: absolute;
                 top: 10px;
-                left: 20px;
+                left: 10px;
                 z-index: 10000; /* Z-index muito alto para garantir que fique acima de tudo */
             }
 
             /* Estilizar o ícone do menu hambúrguer */
             .menu-hamburguer i {
-                font-size: 24px;
+                font-size: 30px;
                 color: #fff;
             }
         }
@@ -275,67 +260,43 @@
             <div class="logo"></div>
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#" class="menu-item" data-toggle="sub-menu">Início</a></li>
+                    <li><a href="#" class="menu-item" data-toggle="sub-menu">INICIO</a></li>
                     <li>
-                        <a href="#" class="menu-item" data-toggle="sub-menu">Especialidades</a>
+                        <a href="#" class="menu-item" data-toggle="sub-menu">ESPECICIALIDADES</a>
                         <ul>
-                            <li><a href="https://pt.wikipedia.org/wiki/Python"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> Python</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/Python"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> PYTHON</a></li>
                             <li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)"><img src="img/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
                             <li><a href="https://pt.wikipedia.org/wiki/C++"><img src="img/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="menu-item" data-toggle="sub-menu">Sobre</a></li>
+                    <li><a href="#" class="menu-item" data-toggle="sub-menu">SOBRE</a></li>
                     <li>
-                        <a href="#" class="menu-item" data-toggle="sub-menu">Projetos</a>
+                        <a href="#" class="menu-item" data-toggle="sub-menu">PROJETOS</a>
                         <ul>
-                            <li><a href="https://dini021.github.io/Sistema-Solar-Att/">Sistema Solar</a></li>
+                            <li><a href="https://dini021.github.io/Sistema-Solar-Att/">SISTEMA SOLAR</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <div class="btn-contato">
-                <button id="btnMostrarFormulario">Contato</button>
+                <button  id="btnMostrarFormulario">CONTATO</button>
             </div>
         </div>
     </header>
 
     <!-- Formulário de Contato -->
     <div id="formulario-contato">
-        <h2>Formulário de Contato</h2>
-        <button id="btnVoltar"><i class="fas fa-arrow-left"></i></button>
+        <h2>FORMULARIO DE CONTATO</h2>
+        <button id="btnVoltar"><i class="bi bi-arrow-left"></i></i></button>
         <form action="https://formsubmit.co/s.kelve@acad.ifma.edu.br" method="POST" enctype="text/plain">
-            <label for="name"><b>Digite seu nome:</b></label>
+            <label for="name"><b>DIGITE SEU NOME:</b></label>
             <input type="text" name="name" id="name" placeholder="Digite seu nome." required>
             <br><br>
-            <label for="email"><b>Digite seu email:</b></label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email." required>
+            <label for="email"><b>DIGITE O GMAIL:</b></label>
+            <input type="email" name="email" id="email" placeholder="Digite o gmail a ser contatado" required>
             <br><br>
-            <label for="senha"><b>Digite sua senha:</b></label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha." required>
-            <br><br>
-            <h4>Qual sua profissão?</h4>
-            <input type="radio" name="profissao" id="professor" value="Professor">
-            <label for="professor">Professor</label>
-            <input type="radio" name="profissao" id="estudante" value="Estudante">
-            <label for="estudante">Estudante</label>
-            <input type="radio" name="profissao" id="vendedor" value="Vendedor">
-            <label for="vendedor">Vendedor</label>
-            <input type="radio" name="profissao" id="nada" value="Nada">
-            <label for="nada">Em nada no momento</label>
-            <br><br>
-            <h4>Como você acessa a internet?</h4>
-            <input type="checkbox" id="celular" name="acessoInternet" value="Celular">
-            <label for="celular">Celular</label>
-            <input type="checkbox" id="notebook" name="acessoInternet" value="Notebook/PC">
-            <label for="notebook">Notebook/PC</label>
-            <input type="checkbox" id="semInternet" name="acessoInternet" value="Não possuo acesso a internet">
-            <label for="semInternet">Não possuo acesso a internet</label>
-            <br><br>
-            <label for="estado">Estado</label>
-            <select id="estado" name="estado">
-                <option value="MA">Maranhão</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="AC">Acre</option>
+        
+           
             </select>
             <br><br>
             <textarea name="coment" id="coment" cols="30" rows="10" placeholder="Comentário" required></textarea>
