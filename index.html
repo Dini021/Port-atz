@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos para o formulário de contato (será exibido quando o botão for clicado) */
+        /* Estilos para o formulário de contato */
         #formulario-contato {
             display: none;
             position: fixed;
@@ -23,8 +23,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.938);
             overflow-y: auto;
             max-height: 77%;
-            width: 85%; /* Ajuste para largura máxima */
-            max-width: 400px; /* Largura máxima */
+            width: 85%;
+            max-width: 400px;
         }
 
         #formulario-contato label {
@@ -74,10 +74,10 @@
         .menu-desktop ul ul {
             display: none;
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.8); /* Background menos transparente */
+            background-color: rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 0; /* Removido o padding para evitar espaçamento extra */
-            list-style-type: none; /* Removido marcadores de lista */
+            padding: 0;
+            list-style-type: none;
         }
 
         .menu-desktop ul li:hover > ul {
@@ -100,14 +100,14 @@
             align-items: center;
             padding: 10px;
             white-space: nowrap;
-            text-decoration: none; /* Removido sublinhado dos links */
-            color: #fcfbfb; /* Cor dos textos definida como branca */
+            text-decoration: none;
+            color: #fcfbfb;
         }
 
         /* Estilo para o cabeçalho e menu */
         header {
-            background-color: #36323200; /* Cor de fundo do cabeçalho */
-            color: #fff; /* Cor do texto no cabeçalho */
+            background-color: #36323200;
+            color: #fff;
             padding: 1px 0;
             position: static;
         }
@@ -119,12 +119,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            position: static; /* Garante que a posição relativa englobe todos os filhos */
+            position: static;
         }
 
         .logo {
-            width: 100px; /* Largura da logo */
-            height: auto; /* Altura automática */
+            width: 100px;
+            height: auto;
         }
 
         .menu-desktop ul {
@@ -137,21 +137,21 @@
         }
 
         .menu-desktop ul li a {
-            color: #f7f2f2; /* Cor do texto no menu */
-            text-decoration:none;
+            color: #f7f2f2;
+            text-decoration: none;
             padding: 12px;
-            display:inline-block;
+            display: inline-block;
         }
 
         .menu-desktop ul ul {
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #29272700; /* Cor de fundo do submenu */
+            background-color: #29272700;
             border-radius: 0px;
             box-shadow: 0 0 1000px rgba(7, 7, 7, 0);
             min-width: 200px;
-            z-index: 1000; /* Z-index para garantir que fique sobre o conteúdo */
+            z-index: 1000;
             display: none;
         }
 
@@ -176,7 +176,37 @@
             background-color: #1d171700;
         }
 
-        /* Estilo para tornar o header responsivo */
+        /* Estilos para o texto de apresentação */
+        .apresentacao {
+            text-align: center;
+            padding:250px 100px;
+            background-color: #fdfdfd00;
+        }
+
+        .apresentacao h1 {
+            font-size: 2em;
+            margin: 15;
+            color: #f7f2f2;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            text-align: center;
+            padding: 470px;
+            background-color: #8a828200;
+            color: #c43a3a;
+        }
+
+        footer a {
+            color: #ec0202;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+        /* Estilos responsivos */
         @media screen and (max-width: 768px) {
             .interface {
                 flex-direction: column;
@@ -188,19 +218,19 @@
             }
 
             .menu-desktop {
-                display: none; /* Ocultar o menu por padrão em dispositivos móveis */
+                display: none;
                 width: 100%;
             }
 
             .menu-desktop ul {
                 flex-direction: column;
-                background-color: #0a0a0ac5; /* Cor de fundo do menu mobile */
+                background-color: #0a0a0ac5;
                 position: absolute;
                 top: 0px;
                 left: 0;
                 width: 100%;
-                padding: 100;
-                z-index: 999; /* Z-index menor para ficar abaixo do menu hambúrguer */
+                padding: 0;
+                z-index: 999;
             }
 
             .menu-desktop ul li {
@@ -216,7 +246,7 @@
             .menu-desktop ul ul {
                 position: static;
                 width: 100%;
-                margin-top:2px;
+                margin-top: 2px;
             }
 
             .btn-contato {
@@ -225,24 +255,21 @@
                 right: 0px;
             }
 
-            /* Exibir o botão do menu hambúrguer em dispositivos móveis */
             .menu-hamburguer {
                 display: block;
                 cursor: pointer;
                 position: absolute;
                 top: 10px;
                 left: 10px;
-                z-index: 10000; /* Z-index muito alto para garantir que fique acima de tudo */
+                z-index: 10000;
             }
 
-            /* Estilizar o ícone do menu hambúrguer */
             .menu-hamburguer i {
                 font-size: 30px;
                 color: #fff;
             }
         }
 
-        /* Ocultar o botão do menu hambúrguer em telas maiores */
         @media screen and (min-width: 769px) {
             .menu-hamburguer {
                 display: none;
@@ -253,7 +280,6 @@
 <body class="bg">
     <header>
         <div class="interface">
-            <!-- Botão do menu hambúrguer (três barras) -->
             <div class="menu-hamburguer" id="btnHamburguer">
                 <i class="fas fa-bars"></i>
             </div>
@@ -262,11 +288,11 @@
                 <ul>
                     <li><a href="#" class="menu-item" data-toggle="sub-menu">INICIO</a></li>
                     <li>
-                        <a href="#" class="menu-item" data-toggle="sub-menu">ESPECICIALIDADES</a>
+                        <a href="#" class="menu-item" data-toggle="sub-menu">ESPECIALIDADES</a>
                         <ul>
-                            <li><a href="https://pt.wikipedia.org/wiki/Python"><img src="./img/imagemns/5848152fcef1014c0b5e4967.webp" alt="Python"> PYTHON</a></li>
-                            <li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)"><img src="./img/imagemns/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
-                            <li><a href="https://pt.wikipedia.org/wiki/C++"><img src="./img/imagemns/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/Python"><img src="img/5848152fcef1014c0b5e4967.webp" alt="Python"> PYTHON</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)"><img src="img/b83d6b47a9502dfaf535087627a8bf96-icone-da-linguagem-de-programacao-c.webp" alt="C"> C</a></li>
+                            <li><a href="https://pt.wikipedia.org/wiki/C++"><img src="img/c-plus-plus-enum-templates-recursos.webp" alt="C++"> C++</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="menu-item" data-toggle="sub-menu">SOBRE</a></li>
@@ -279,33 +305,42 @@
                 </ul>
             </nav>
             <div class="btn-contato">
-                <button  id="btnMostrarFormulario">CONTATO</button>
+                <button id="btnMostrarFormulario">CONTATO</button>
             </div>
         </div>
     </header>
 
+    <!-- Texto de Apresentação -->
+    <section class="apresentacao">
+        <h1>MEU NOME E GIAN KELVE E BEM-VINDO AO MEU PORTFÓLIO</h1>
+    </section>
+
     <!-- Formulário de Contato -->
     <div id="formulario-contato">
-        <h2>FORMULARIO DE CONTATO</h2>
-        <div classs ="botoes">
-        <button id="btnVoltar"><i class="bi bi-arrow-left" onclick="clcul()">VOLTAR</button>
-        <form action="https://formsubmit.co/s.kelve@acad.ifma.edu.br" method="POST" enctype="text/plain">
-            <label for="name"><b>DIGITE SEU NOME:</b></label>
-            <input type="text" name="name" id="name" placeholder="Digite seu nome." required>
-            <br><br>
-            <label for="email"><b>DIGITE O GMAIL:</b></label>
-            <input type="email" name="email" id="email" placeholder="Digite o gmail a ser contatado" required>
-            <br><br>
-        
-           
-            </select>
-            <br><br>
-            <textarea name="coment" id="coment" cols="30" rows="10" placeholder="Comentário" required></textarea>
-            <br><br>
-            <input type="submit" value="Enviar">
-        </form>
-        <p id="sucesso">Formulário concluído com sucesso.</p>
+        <h2>FORMULÁRIO DE CONTATO</h2>
+        <div class="botoes">
+            <button id="btnVoltar"><i class="bi bi-arrow-left">VOLTAR</i></button>
+            <form action="https://formsubmit.co/s.kelve@acad.ifma.edu.br" method="POST" enctype="text/plain">
+                <label for="name"><b>DIGITE SEU NOME:</b></label>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome." required>
+                <br><br>
+                <label for="email"><b>DIGITE O GMAIL:</b></label>
+                <input type="email" name="email" id="email" placeholder="Digite o gmail a ser contatado" required>
+                <br><br>
+                <textarea name="coment" id="coment" cols="30" rows="10" placeholder="Comentário" required></textarea>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </form>
+            <p id="sucesso">Formulário concluído com sucesso.</p>
+        </div>
     </div>
+
+    <!-- Rodapé com ícone do Instagram -->
+    <footer>
+        <a href="https://www.instagram.com/SEU_USUARIO_INSTAGRAM" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+        </a>
+    </footer>
 
     <script>
         // Script para mostrar/ocultar o formulário de contato
