@@ -10,6 +10,9 @@ body {
     height: 100vh;
 }
 
+
+
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -19,6 +22,13 @@ body {
 header {
     padding: 50px 4%;
 }
+h2.titulo{
+    color: #cccccc;
+    font-size:30px;
+    text-align: center;
+}
+
+
 
 header > .interface {
     display: flex;
@@ -51,6 +61,9 @@ header .btn-contato button {
     font-size: 15px;
     cursor: pointer;
 }
+.flex{
+    display: flex;
+}
 
 header .btn-contato button:hover {
     box-shadow: 0px 0px 8px;
@@ -65,7 +78,15 @@ header .btn-contato button:hover {
 }
 
 /* TOPO DO SITE    */
+h2.titulo{
+    color: rgb(160, 41, 41);
+    font-size: 30px;
+    text-align: center;
+    padding: 60px;
+    
 
+
+}
 section.topo-do-site {
     padding: 40px 4%;
 }
@@ -89,7 +110,7 @@ section.topo-do-site {
 
 .contato label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     color: #333333;
 }
 
@@ -134,3 +155,63 @@ section.topo-do-site {
 .contato a:hover {
     text-decoration: underline;
 }
+section.topo-do-site{
+    padding: 40px 4%;
+
+
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-items: center;
+
+}
+.topo-do-site h1{
+   color: #f18e0b;
+   font-size: 50px;
+   line-height: 55px;
+   margin: 150px 0%;
+
+}
+.topo-do-site p{
+    color: #f18e0b;
+    font-size: 50px;
+    margin: 80px 0%;
+ 
+ }
+
+ section.habilidades{
+    padding: 40px 4%;
+    color: #0056b3;
+
+ }
+
+section.habilidades{
+    gap: 60px;
+
+ }
+ .habilidades .habilidades-box{
+    color: #0056b3;
+
+    padding: 60px;
+    border: 2px solid coral;
+
+ }
+
+
+ .habilidades .habilidades-box i {
+
+    font-size: 5px;
+    color: rgb(23, 201, 0);
+
+
+ }
+ .habilidades .habilidades-box h3{
+    font-size: 50px;
+    margin: 30px 0%;
+
+ }
+ .habilidades .habilidades-box p{
+    font-size: 50px;
+    margin: 30px 0%;
+
+ }
